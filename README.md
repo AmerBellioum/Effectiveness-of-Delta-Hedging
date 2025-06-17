@@ -13,7 +13,9 @@ The delta hedge is rebalanced at **discrete times**. The discrete nature of the 
 
 ### Change In Portfolio Value from i to i+1
 
-$$\Pi_{i+1} - \Pi_i = \Delta_i (S_{i+1} - S_i) - (V_{i+1} - V_i) = \left. \frac{\partial V}{\partial S} \right|_i (S_{i+1} - S_i) - (V_{i+1} - V_i)$$
+$$
+\Pi_{i+1} - \Pi_i = \Delta_i (S_{i+1} - S_i) - (V_{i+1} - V_i) = \left. \frac{\partial V}{\partial S} \right|_{i} (S_{i+1} - S_i) - (V_{i+1} - V_i)
+$$
 
 By employing Taylor Series expansions, the exposure of the portfolio due to the discrete nature of the rebalancing can be seen to be a function of **Γ**, the convexity, in the equation below (see LateX document for full derivation).
 
