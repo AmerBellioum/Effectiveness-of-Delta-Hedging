@@ -20,6 +20,10 @@ This project determines the effectiveness of daily delta-hedging across a variet
 
 The project also diagnoses which of the primary error sources dominate by considering where the primary sources of error are greatest. Diagnosis of the driving error serves to inform what correction strategies ought to be employed for a more effective delta hedge. 
 
+## Results & Insights
+
+## Conclusions & Summarisations
+
 ## 📁 Market Data Format Requirements
 
 For the code to work, the market data must be stored specifically as highlighted:
