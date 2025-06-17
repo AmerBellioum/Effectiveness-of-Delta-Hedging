@@ -26,15 +26,12 @@ The delta hedge is rebalanced at **discrete times**. The discrete nature of the 
   <img src="diagrams/DeltaHedgeMethodology-2.png" width="500"/>
 </p>
 
-## Results & Insights
+## Results
 
-This section visualises the hedging performance of Black-Scholes-based delta hedging strategies across varying contract types.
-
-### 📈 Mean PnL Surface
+### Mean PnL Surface
 <div align="center">
   <img src="figures/Mean_PnL_Surf_BS.png" width="600"/>
 </div>
-Shows average PnL over all simulations. Negative values indicate consistent losses due to model or rebalancing error.
 
 ---
 
@@ -42,7 +39,6 @@ Shows average PnL over all simulations. Negative values indicate consistent loss
 <div align="center">
   <img src="figures/Mean_PnL_Surface_2.png" width="600"/>
 </div>
-Alternative visualisation of Mean PnL. Useful for cross-verifying PnL trends across moneyness and time to maturity with different interpolation or view angle.
 
 ---
 
@@ -50,7 +46,6 @@ Alternative visualisation of Mean PnL. Useful for cross-verifying PnL trends acr
 <div align="center">
   <img src="figures/Std_Dev_Surf_BS.png" width="600"/>
 </div>
-Visualises variability of hedging outcomes. Higher standard deviation implies greater PnL risk.
 
 ---
 
@@ -60,7 +55,6 @@ Visualises variability of hedging outcomes. Higher standard deviation implies gr
 </div>
 Volatility premium calculated as:  
 <strong>−mean(PnL) + risk_aversion × std(PnL)</strong>.  
-Higher premiums suggest markets where hedging is riskier and costlier.
 
 ---
 
@@ -68,7 +62,6 @@ Higher premiums suggest markets where hedging is riskier and costlier.
 <div align="center">
   <img src="figures/vol_mispricing_BS.png" width="600"/>
 </div>
-Displays average pricing difference between Black-Scholes and pricing under realised volatility — a measure of model error.
 
 ---
 
@@ -76,7 +69,6 @@ Displays average pricing difference between Black-Scholes and pricing under real
 <div align="center">
   <img src="figures/gammaerror_BS.png" width="600"/>
 </div>
-Gamma error arises from discrete hedging in convex payoff structures. Peaks around ATM, long-dated options.
 
 ---
 
