@@ -51,15 +51,6 @@ The delta hedge is rebalanced at **discrete times**. The discrete nature of the 
 
 ---
 
-###  Volatility Premium
-<div align="center">
-  <img src="figures/VolPremSurf_BS.png" width="600"/>
-</div>
-Volatility premium calculated as:  
-<strong>−mean(PnL) + risk_aversion × std(PnL)</strong>.  
-
----
-
 ###  Volatility Mispricing
 <div align="center">
   <img src="figures/vol_mispricing_BS.png" width="600"/>
@@ -83,6 +74,10 @@ Volatility premium calculated as:
 The delta-hedge is clearly the most effective for short-dated options that are far ITM or OTM as PnL suffers the least then. The effectiveness of delta-hedging drops with both 
 increasing time to maturity and moneyness tending to 1 - although it increases at a greater rate with time to maturity. 
 
+The volatility mispricing and gamma error both appear to increase with longer-dated option contracts and also increase (but to a lesser degree) near ATM contracts. 
+
+The standard deviation of the PnL over all time periods seems to similarly be most amplified at longer-dated contracts - although more particularly on the lower moneyness side. This similarly suggests that reliability of the hedge falls with longer maturity times - as the potential values can vary far more and hence are much riskier. 
+
 ### Explanation of Observations - Effectiveness vs. Time to Maturity
 
 With a longer time to maturity, more error has a chance to accumulate. The mispricing of the option's delta over longer periods of time leads to compounding portfolio exposure for longer periods
@@ -91,6 +86,8 @@ detriment than for short-dated options.
 
 As well as increasing error accumulation, the volatility mispricing itself is amplified with longer maturity. Not only is volatility mispricing's impact of delta compounded over time, the volatility is mispriced to a 
 greater extent - as seen by the volatility mispricing surface showcasing a larger deviation with time. As more time elapses, the volatility of the underlying is more likely to experience changes so with long-dated options, they are more likely to suffer from mispricing eventually - causing large deviations. 
+
+These also explain the increase in standard deviation with time to maturity. With the errors accumulating, the hedge becomes more path-sensitive and thus exhibits larger fluctuations. As such, the higher standard deviation reinforces than longer-dated options experience less effective hedges. 
 
 <p align="center">
   <img src="figures/hedge_cost_eqn.png" width="500"/>
