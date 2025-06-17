@@ -92,7 +92,18 @@ detriment than for short-dated options.
 As well as increasing error accumulation, the volatility mispricing itself is amplified with longer maturity. Not only is volatility mispricing's impact of delta compounded over time, the volatility is mispriced to a 
 greater extent - as seen by the volatility mispricing surface showcasing a larger deviation with time. As more time elapses, the volatility of the underlying is more likely to experience changes so with long-dated options, they are more likely to suffer from mispricing eventually - causing large deviations. 
 
-SHOW FIGS OF EQUATIONS
+<p align="center">
+  <img src="figures/hedge_cost_eqn.png" width="500"/>
+</p>
+
+Longer maturities imply more rebalancing at a mispriced **Δ**, increasing volatility-based model error with greater maturity.
+
+<p align="center">
+  <img src="figures/gamma_error_accumulated.png" width="500"/>
+</p>
+
+Gamma slippage compounds with time, convexity errors compound over more intervals.
+
 
 ### Improvements - Effectiveness vs. Time to Maturity
 
@@ -107,6 +118,9 @@ Nearing the money, it can also be seen that the error grows. This is because, ne
 ### Conclusion - Effectiveness vs. Time to Maturity
 
 With gamma error being very large for ATM options, a natural remedy is therefore to rebalance the delta-hedge more frequently to reduce the gamma error. However, again, this may be subjected to constraints. 
+
+### Diagrammatic Visualisation of Findings
+
 
 <div align="center">
   <img src="diagrams/EffectivenessFlowchart.png" width="600"/>
