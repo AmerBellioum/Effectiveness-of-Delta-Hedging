@@ -20,8 +20,10 @@ The delta hedge is rebalanced at **discrete times**. The discrete nature of the 
 
 1. This project determines the effectiveness of daily delta-hedging across a variety of option contract types (varied by moneyness and time to maturity) by measuring the mean PnL achieved by employing the strategy across historical data ranging from 2017 to 2024. This serves to inform the contracts types where Black-Scholes-based daily delta-hedging is sufficient and where it falls short. 
 
-2. The project also diagnoses which of the primary error sources dominate by considering where the primary sources of error are greatest. Diagnosis of the driving error serves to inform what correction strategies ought to be employed for a more effective delta hedge. 
+2. The project also diagnoses which of the primary error sources dominate by considering where the primary sources of error are greatest. Diagnosis of the driving error serves to inform what correction strategies ought to be employed for a more effective delta hedge.
 
+3. As an extension, the project will also simulate the delta-hedge by employing the Heston stochastic vol. valuation in order to compare the effectiveness of these different models in delta-hedging.
+   
 <p align="center">
   <img src="diagrams/DeltaHedgeMethodology-2.png" width="500"/>
 </p>
