@@ -9,4 +9,6 @@ For the code to work, the market data must be stored specifically as highlighted
 
 **Sample Market Data Format**:
 
-![Market Data Format](figures/Market_Data_Format.png)
+<p align="center">
+  <img src="figures/Market_Data_Format.png" width="500"/>
+</p>
