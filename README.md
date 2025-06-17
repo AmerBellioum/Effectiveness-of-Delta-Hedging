@@ -38,7 +38,7 @@ Shows average PnL over all simulations. Negative values indicate consistent loss
 
 ---
 
-### 📈 Mean PnL Surface (Alternative View)
+###  Mean PnL Surface (Alternative View)
 <div align="center">
   <img src="figures/Mean_PnL_Surface_2.png" width="600"/>
 </div>
@@ -46,7 +46,7 @@ Alternative visualisation of Mean PnL. Useful for cross-verifying PnL trends acr
 
 ---
 
-### 📊 Standard Deviation of PnL
+###  Standard Deviation of PnL
 <div align="center">
   <img src="figures/Std_Dev_Surf_BS.png" width="600"/>
 </div>
@@ -54,7 +54,7 @@ Visualises variability of hedging outcomes. Higher standard deviation implies gr
 
 ---
 
-### 💸 Volatility Premium
+###  Volatility Premium
 <div align="center">
   <img src="figures/VolPremSurf_BS.png" width="600"/>
 </div>
@@ -64,7 +64,7 @@ Higher premiums suggest markets where hedging is riskier and costlier.
 
 ---
 
-### 🧮 Volatility Mispricing
+###  Volatility Mispricing
 <div align="center">
   <img src="figures/vol_mispricing_BS.png" width="600"/>
 </div>
@@ -72,7 +72,7 @@ Displays average pricing difference between Black-Scholes and pricing under real
 
 ---
 
-### 📐 Gamma Error Surface
+###  Gamma Error Surface
 <div align="center">
   <img src="figures/gammaerror_BS.png" width="600"/>
 </div>
@@ -80,16 +80,39 @@ Gamma error arises from discrete hedging in convex payoff structures. Peaks arou
 
 ---
 
-### ⏱️ PnL Over Time by Asset
-<div align="center">
-  <img src="figures/PnLvTimevAsset.png" width="600"/>
-</div>
-Hedging PnL over time for META, GOOG, and AMZN long-dated ATM calls. Deviations indicate macro-driven risk or structural model misspecification.
 
 
 ## Conclusions & Summarisations
 
-It can be observed that the effectivness of the delta-hedging strategy is greatest at short-dated, OTM and ITM option contracts and that the effectiveness drops with higher maturity time and regions ATM. Observations of the error graphs with varying maturity and moneyness explain this. With higher time to maturity, volatility mispricing error increases significantly. ATM, gamma is at a maximum too - explaining the gamma error being maximisd here. 
+### Observations
+
+The delta-hedge is clearly the most effective for short-dated options that are far ITM or OTM as PnL suffers the least then. The effectiveness of delta-hedging drops with both 
+increasing time to maturity and moneyness tending to 1 - although it increases at a greater rate with time to maturity. 
+
+### Explanation of Observations - Effectiveness vs. Time to Maturity
+
+With a longer time to maturity, more error has a chance to accumulate. The mispricing of the option's delta over longer periods of time leads to compounding portfolio exposure for longer periods
+of time - which can accumulate and lead to greater PnL deviation. Similarly, the gamma error can also accumulate over long periods of time - with the compounding effect causing it to be of greater
+detriment than for short-dated options. 
+
+As well as increasing error accumulation, the volatility mispricing itself is amplified with longer maturity. Not only is volatility mispricing's impact of delta compounded over time, the volatility is mispriced to a 
+greater extent - as seen by the volatility mispricing surface showcasing a larger deviation with time. As more time elapses, the volatility of the underlying is more likely to experience changes so with long-dated options, they are more likely to suffer from mispricing eventually - causing large deviations. 
+
+SHOW FIGS OF EQUATIONS
+
+### Improvements - Effectiveness vs. Time to Maturity
+
+As such, when delta-hedging with longer-dated contracts, it would be do well to use a stochastic volatility model (such as the Heston Model) - where the volatility is a variable. This may serve to capture the variation of the volatility in the market better and improve the quality of the hedge. 
+
+With gamma error also accumulating over time, rebalancing more frequently to drive down gamma error may also help - although it is important to note that rebalancing frequencies may be constrained by transacation costs. 
+
+### Explanation of Observations - Effectiveness vs. ATM
+
+Nearing the money, it can also be seen that the error grows. This is because, near the money, the convexity of the option's price is much higher. As such, the discretisation error is amplified. 
+
+### Conclusion - Effectiveness vs. Time to Maturity
+
+With gamma error being very large for ATM options, a natural remedy is therefore to rebalance the delta-hedge more frequently to reduce the gamma error. However, again, this may be subjected to constraints. 
 
 <div align="center">
   <img src="diagrams/EffectivenessFlowchart.png" width="600"/>
