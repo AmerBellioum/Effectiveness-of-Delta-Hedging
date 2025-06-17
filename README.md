@@ -89,6 +89,16 @@ Hedging PnL over time for META, GOOG, and AMZN long-dated ATM calls. Deviations 
 
 ## Conclusions & Summarisations
 
+It can be observed that the effectivness of the delta-hedging strategy is greatest at short-dated, OTM and ITM option contracts and that the effectiveness drops with higher maturity time and regions ATM. Observations of the error graphs with varying maturity and moneyness explain this. With higher time to maturity, volatility mispricing error increases significantly. ATM, gamma is at a maximum too - explaining the gamma error being maximisd here. 
+
+<div align="center">
+  <img src="diagrams/EffectivenessFlowchart.png" width="600"/>
+</div>
+
+<div align="center">
+  <img src="diagrams/BS_DeltaHedge_Flowchart.png" width="600"/>
+</div>
+
 ## 📁 Market Data Format Requirements
 
 For the code to work, the market data must be stored specifically as highlighted:
