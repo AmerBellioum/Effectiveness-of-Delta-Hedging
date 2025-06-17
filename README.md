@@ -2,7 +2,6 @@
 
 Market-making financial institution that sell option contracts seek to neutralise their exposure to market movements and instead earn structural revenues (e.g., bid-ask spreads). **Delta-Hedging**, which entails holding the exact amount of shares required to offset changes in the value of the payoff, is a strategy typically employed to reduce directional exposure. However, delta-hedging itself faces multiple sources of error. Most significantly:
 
-## Model Error
 
 ## Model Error
 
@@ -14,17 +13,13 @@ The delta hedge is rebalanced at **discrete times**. The discrete nature of the 
 
 ### Change In Portfolio Value from i to i+1
 
-$$
-\Pi_{i+1} - \Pi_i = \Delta_i (S_{i+1} - S_i) - (V_{i+1} - V_i) = \left. \frac{\partial V}{\partial S} \right|_i (S_{i+1} - S_i) - (V_{i+1} - V_i)
-$$
+$$\Pi_{i+1} - \Pi_i = \Delta_i (S_{i+1} - S_i) - (V_{i+1} - V_i) = \left. \frac{\partial V}{\partial S} \right|_i (S_{i+1} - S_i) - (V_{i+1} - V_i)$$
 
 By employing Taylor Series expansions, the exposure of the portfolio due to the discrete nature of the rebalancing can be seen to be a function of **Γ**, the convexity, in the equation below (see LateX document for full derivation).
 
 ### Exposure of Portfolio to Gamma Error
 
-$$
-\Pi_{i+1} - \Pi_i = -\frac{1}{2} \left. \frac{\partial^2 V}{\partial S^2} \right|_i (S_{i+1} - S_i)^2 + \mathcal{O}((S_{i+1} - S_i)^3)
-$$
+$$\Pi_{i+1} - \Pi_i = -\frac{1}{2} \left. \frac{\partial^2 V}{\partial S^2} \right|_i (S_{i+1} - S_i)^2 + \mathcal{O}((S_{i+1} - S_i)^3)$$
 
 ## 📁 Market Data Format Requirements
 
