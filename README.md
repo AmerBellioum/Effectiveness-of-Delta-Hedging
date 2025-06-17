@@ -38,6 +38,14 @@ Shows average PnL over all simulations. Negative values indicate consistent loss
 
 ---
 
+### 📈 Mean PnL Surface (Alternative View)
+<div align="center">
+  <img src="figures/Mean_PnL_Surface_2.png" width="600"/>
+</div>
+Alternative visualisation of Mean PnL. Useful for cross-verifying PnL trends across moneyness and time to maturity with different interpolation or view angle.
+
+---
+
 ### 📊 Standard Deviation of PnL
 <div align="center">
   <img src="figures/Std_Dev_Surf_BS.png" width="600"/>
