@@ -9,19 +9,11 @@ The amount of shares held, **Δ**, is computed based on a mathematical model of 
 
 ## Gamma Error
 
-The delta hedge is rebalanced at **discrete times**. The discrete nature of the rebalancing procedure gives rise to hedging error associated with failure to capture the convexity of the option's value with respect to the underlying price.
+The delta hedge is rebalanced at **discrete times**. The discrete nature of the rebalancing procedure gives rise to hedging error associated with failure to capture the convexity of the option's value with respect to the underlying price. By employing Taylor Series expansions, the exposure of the portfolio due to the discrete nature of the rebalancing can be seen to be a function of **Γ**, the convexity, in the equation below (see LateX document for full derivation).
 
-### Change In Portfolio Value from i to i+1
-
-$$
-\Pi_{i+1} - \Pi_i = \Delta_i (S_{i+1} - S_i) - (V_{i+1} - V_i) = \left. \frac{\partial V}{\partial S} \right|_{i} (S_{i+1} - S_i) - (V_{i+1} - V_i)
-$$
-
-By employing Taylor Series expansions, the exposure of the portfolio due to the discrete nature of the rebalancing can be seen to be a function of **Γ**, the convexity, in the equation below (see LateX document for full derivation).
-
-### Exposure of Portfolio to Gamma Error
-
-$$\Pi_{i+1} - \Pi_i = -\frac{1}{2} \left. \frac{\partial^2 V}{\partial S^2} \right|_i (S_{i+1} - S_i)^2 + \mathcal{O}((S_{i+1} - S_i)^3)$$
+<p align="center">
+  <img src="figures/discretisation_error_visualisation.png" width="500"/>
+</p>
 
 ## 📁 Market Data Format Requirements
 
