@@ -1,12 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Jun  9 12:59:52 2025
-
-@author: amerbellioum
-"""
-
-# PROJECT: The Effectiveness of Discrete Delta-Hedging for European Call Option Writer
+# PROJECT: The Effectiveness of Discrete Delta-Hedging for European Option Writer
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 # Python Libraries
