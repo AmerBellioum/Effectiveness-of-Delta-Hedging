@@ -96,7 +96,7 @@ These also explain the increase in standard deviation with time to maturity. Wit
 Longer maturities imply more rebalancing at a mispriced **Δ**, increasing volatility-based model error with greater maturity.
 
 <p align="center">
-  <img src="figures/gamma_error_accumulated.png" width="500"/>
+  <img src="figures/gamma_error_accumulated.png" width="700"/>
 </p>
 
 Gamma slippage compounds with time, convexity errors compound over more intervals.
