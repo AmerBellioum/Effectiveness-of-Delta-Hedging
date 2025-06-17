@@ -2,9 +2,29 @@
 
 Market-making financial institution that sell option contracts seek to neutralise their exposure to market movements and instead earn structural revenues (e.g., bid-ask spreads). **Delta-Hedging**, which entails holding the exact amount of shares required to offset changes in the value of the payoff, is a strategy typically employed to reduce directional exposure. However, delta-hedging itself faces multiple sources of error. Most significantly:
 
-1. Model Error. The amount of shares held, Delta, is computed based on a mathematical model of the option price. Mathematical models are rarely fully representative - therefore there is error associated with the difference in how the MODEL values the option vs the REAL valuation. For instance, the Black-Scholes model employed in this circumstance assumes constant volatility of the underlying asset - where in reality, the volatility of the asset may be a function of time.
+## Model Error
 
-2. Gamma Error: 
+## Model Error
+
+The amount of shares held, **Δ**, is computed based on a mathematical model of the option price. Mathematical models are rarely fully representative—therefore there is error associated with the difference in how the **MODEL** values the option vs. the **REAL** valuation. For instance, the Black–Scholes model employed in this circumstance assumes constant volatility of the underlying asset—where in reality, the volatility of the asset may vary significantly with time, leading to a misvaluation of the option **Δ** and hence an erroneous hedge.
+
+## Gamma Error
+
+The delta hedge is rebalanced at **discrete times**. The discrete nature of the rebalancing procedure gives rise to hedging error associated with failure to capture the convexity of the option's value with respect to the underlying price.
+
+### Change In Portfolio Value from i to i+1
+
+$$
+\Pi_{i+1} - \Pi_i = \Delta_i (S_{i+1} - S_i) - (V_{i+1} - V_i) = \left. \frac{\partial V}{\partial S} \right|_i (S_{i+1} - S_i) - (V_{i+1} - V_i)
+$$
+
+By employing Taylor Series expansions, the exposure of the portfolio due to the discrete nature of the rebalancing can be seen to be a function of **Γ**, the convexity, in the equation below (see LateX document for full derivation).
+
+### Exposure of Portfolio to Gamma Error
+
+$$
+\Pi_{i+1} - \Pi_i = -\frac{1}{2} \left. \frac{\partial^2 V}{\partial S^2} \right|_i (S_{i+1} - S_i)^2 + \mathcal{O}((S_{i+1} - S_i)^3)
+$$
 
 ## 📁 Market Data Format Requirements
 
