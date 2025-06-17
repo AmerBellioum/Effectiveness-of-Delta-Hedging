@@ -2,7 +2,6 @@
 
 Market-making financial institution that sell option contracts seek to neutralise their exposure to market movements and instead earn structural revenues (e.g., bid-ask spreads). **Delta-Hedging**, which entails holding the exact amount of shares required to offset changes in the value of the payoff, is a strategy typically employed to reduce directional exposure. However, delta-hedging itself faces multiple sources of error. Most significantly:
 
-
 ## Model Error
 
 The amount of shares held, **Δ**, is computed based on a mathematical model of the option price. Mathematical models are rarely fully representative—therefore there is error associated with the difference in how the **MODEL** values the option vs. the **REAL** valuation. For instance, the Black–Scholes model employed in this circumstance assumes constant volatility of the underlying asset—where in reality, the volatility of the asset may vary significantly with time, leading to a misvaluation of the option **Δ** and hence an erroneous hedge.
@@ -14,6 +13,12 @@ The delta hedge is rebalanced at **discrete times**. The discrete nature of the 
 <p align="center">
   <img src="figures/discretisation_error_visualisation.png" width="500"/>
 </p>
+
+##
+
+This project determines the effectiveness of daily delta-hedging across a variety of option contract types (varied by moneyness and time to maturity) by measuring the mean PnL achieved by employing the strategy across historical data ranging from 2017 to 2024. This serves to inform the contracts types where Black-Scholes-based daily delta-hedging is sufficient and where it falls short. 
+
+The project also diagnoses which of the primary error sources dominate by considering where the primary sources of error are greatest. Diagnosis of the driving error serves to inform what correction strategies ought to be employed for a more effective delta hedge. 
 
 ## 📁 Market Data Format Requirements
 
