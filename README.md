@@ -34,6 +34,10 @@ For the code to work, the market data must be stored specifically as highlighted
 4. The data must have exactly the same format as shown in the sample below. 
 5. Files must be stored in a local path.
 
+## Caveats
+
+Input to Moneyness must be symmetrical about 1
+
 **Sample Market Data Format**:
 
 <p align="center">
