@@ -42,7 +42,7 @@ def get_market_data(simulation_params, contract_params):
         data = pd.read_csv(file_path)
         
         # 2.2. Convert Date Column to Datetime To Enable Arithmetic
-        
+         
         data["Date"] = pd.to_datetime(data["Date"])
         
         # 2.3. Filter Data Based on Start & End Dates
