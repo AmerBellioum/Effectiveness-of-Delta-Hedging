@@ -21,7 +21,7 @@ The delta hedge is rebalanced at **discrete times**. The discrete nature of the 
 2. The project also diagnoses which of the primary error sources dominate by considering where the primary sources of error are greatest. Diagnosis of the driving error serves to inform what correction strategies ought to be employed for a more effective delta hedge. 
 
 <p align="center">
-  <img src="figures/DeltaHedgeMethodology-2" width="500"/>
+  <img src="diagrams/DeltaHedgeMethodology-2.png" width="500"/>
 </p>
 
 ## Results & Insights
