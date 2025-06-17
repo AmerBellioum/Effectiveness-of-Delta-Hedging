@@ -28,6 +28,55 @@ The delta hedge is rebalanced at **discrete times**. The discrete nature of the 
 
 ## Results & Insights
 
+This section visualises the hedging performance of Black-Scholes-based delta hedging strategies across varying contract types.
+
+### 📈 Mean PnL Surface
+<div align="center">
+  <img src="figures/Mean_PnL_Surf_BS.png" width="600"/>
+</div>
+Shows average PnL over all simulations. Negative values indicate consistent losses due to model or rebalancing error.
+
+---
+
+### 📊 Standard Deviation of PnL
+<div align="center">
+  <img src="figures/Std_Dev_Surf_BS.png" width="600"/>
+</div>
+Visualises variability of hedging outcomes. Higher standard deviation implies greater PnL risk.
+
+---
+
+### 💸 Volatility Premium
+<div align="center">
+  <img src="figures/VolPremSurf_BS.png" width="600"/>
+</div>
+Volatility premium calculated as:  
+<strong>−mean(PnL) + risk_aversion × std(PnL)</strong>.  
+Higher premiums suggest markets where hedging is riskier and costlier.
+
+---
+
+### 🧮 Volatility Mispricing
+<div align="center">
+  <img src="figures/vol_mispricing_BS.png" width="600"/>
+</div>
+Displays average pricing difference between Black-Scholes and pricing under realised volatility — a measure of model error.
+
+---
+
+### 📐 Gamma Error Surface
+<div align="center">
+  <img src="figures/gammaerror_BS.png" width="600"/>
+</div>
+Gamma error arises from discrete hedging in convex payoff structures. Peaks around ATM, long-dated options.
+
+---
+
+### ⏱️ PnL Over Time by Asset
+<div align="center">
+  <img src="figures/PnLvTimevAsset.png" width="600"/>
+</div>
+Hedging PnL over time for META, GOOG, and AMZN long-dated ATM calls. Deviations indicate macro-driven risk or structural model misspecification.
 
 
 ## Conclusions & Summarisations
