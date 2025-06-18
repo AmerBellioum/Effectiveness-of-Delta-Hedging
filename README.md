@@ -25,7 +25,7 @@ The delta hedge is rebalanced at **discrete times**. The discrete nature of the 
 3. As an extension, the project will also simulate the delta-hedge by employing the Heston stochastic vol. valuation in order to compare the effectiveness of these different models in delta-hedging.
    
 <p align="center">
-  <img src="diagrams/DeltaHedgeMethodology-2.png" width="500"/>
+  <img src="diagrams/DeltaHedgeMethodology-2.png" width="800"/>
 </p>
 
 ## Results
@@ -108,6 +108,8 @@ As such, when delta-hedging with longer-dated contracts, it would be do well to 
 
 With gamma error also accumulating over time, rebalancing more frequently to drive down gamma error may also help - although it is important to note that rebalancing frequencies may be constrained by transacation costs. 
 
+It is also possible to charge a larger volatility premium for longer-dated option contracts to account for the increased risks and reduced hedging effectiveness associated with them. 
+
 ### Explanation of Observations - Effectiveness vs. ATM
 
 Nearing the money, it can also be seen that the error grows. This is because, near the money, the convexity of the option's price is much higher. As such, the discretisation error is amplified. 
@@ -120,11 +122,11 @@ With gamma error being very large for ATM options, a natural remedy is therefore
 
 
 <div align="center">
-  <img src="diagrams/EffectivenessFlowchart.png" width="600"/>
+  <img src="diagrams/EffectivenessFlowchart.png" width="900"/>
 </div>
 
 <div align="center">
-  <img src="diagrams/BS_DeltaHedge_Flowchart.png" width="600"/>
+  <img src="diagrams/BS_DeltaHedge_Flowchart.png" width="900"/>
 </div>
 
 ## Extras: Market Data Format Requirements
