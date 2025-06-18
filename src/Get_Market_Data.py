@@ -38,7 +38,7 @@ def get_market_data(simulation_params, contract_params):
         
         # 2.1. Extract File & Convert to Pandas DataFrame
         
-        file_path = f"/Users/amerbellioum/Documents/QuantProject_DeltaHedging/{ticker}_Data.csv"
+        file_path = f"/data/{ticker}_Data.csv"
         data = pd.read_csv(file_path)
         
         # 2.2. Convert Date Column to Datetime To Enable Arithmetic
