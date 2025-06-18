@@ -13,7 +13,7 @@ The amount of shares held, **Δ**, in a delta-hedging strategy is computed based
 The delta hedge is rebalanced at **discrete times**. The discrete nature of the rebalancing procedure gives rise to hedging error associated with failure to capture the convexity of the option's value with respect to the underlying price. By employing Taylor Series expansions, the exposure of the portfolio due to the discrete nature of the rebalancing can be seen to be a function of **Γ**, the convexity, in the equation below (see LateX document for full derivation).
 
 <p align="center">
-  <img src="figures/deltahedge_errorsources.png" width="900"/>
+  <img src="diagrams/deltahedge_errorsources.png" width="900"/>
 </p>
 
 ## Project Aims
@@ -122,11 +122,11 @@ With gamma error being very large for ATM options, a natural remedy is therefore
 
 
 <div align="center">
-  <img src="diagrams/EffectivenessFlowchart.png" width="900"/>
+  <img src="diagrams/effectiveness_flowchart.png" width="900"/>
 </div>
 
 <div align="center">
-  <img src="diagrams/BS_DeltaHedge_Flowchart.png" width="900"/>
+  <img src="diagrams/DELTA_HEDGE_FLOWCHART.png" width="900"/>
 </div>
 
 ## Extras: Market Data Format Requirements
