@@ -126,7 +126,7 @@ With gamma error being very large for ATM options, a natural remedy is therefore
 </div>
 
 <div align="center">
-  <img src="diagrams/DELTA_HEDGE_FLOWCHART.png" width="900"/>
+  <img src="diagrams/DELTA_HEDGE_FLOW.png" width="900"/>
 </div>
 
 ## Extras: Market Data Format Requirements
