@@ -110,11 +110,11 @@ With gamma error also accumulating over time, rebalancing more frequently to dri
 
 It is also possible to charge a larger volatility premium for longer-dated option contracts to account for the increased risks and reduced hedging effectiveness associated with them. 
 
-### Explanation of Observations - Effectiveness vs. ATM
+### Explanation of Observations - Effectiveness vs. Moneyness
 
 Nearing the money, it can also be seen that the error grows. This is because, near the money, the convexity of the option's price is much higher. As such, the discretisation error is amplified. 
 
-### Conclusion - Effectiveness vs. Time to Maturity
+### Improvements - Effectiveness vs. Moneyness
 
 With gamma error being very large for ATM options, a natural remedy is therefore to rebalance the delta-hedge more frequently to reduce the gamma error. However, again, this may be subjected to constraints. 
 
