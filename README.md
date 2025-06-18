@@ -104,7 +104,7 @@ Gamma slippage compounds with time, convexity errors compound over more interval
 
 ### Improvements - Effectiveness vs. Time to Maturity
 
-As such, when delta-hedging with longer-dated contracts, it would be do well to use a stochastic volatility model (such as the Heston Model) - where the volatility is a variable. This may serve to capture the variation of the volatility in the market better and improve the quality of the hedge. 
+As such, when delta-hedging with longer-dated contracts, switching to a stochastic-volatility framework (e.g., the Heston model) is advisable. Treating volatility as a state variable allows the hedge to adapt to the market’s changing vol dynamics, reducing model error and improving overall hedge quality.
 
 With gamma error also accumulating over time, rebalancing more frequently to drive down gamma error may also help - although it is important to note that rebalancing frequencies may be constrained by transacation costs. 
 
